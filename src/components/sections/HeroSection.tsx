@@ -9,11 +9,11 @@ export function HeroSection() {
           <span className="size-1.5 rounded-full bg-amber-600" aria-hidden="true" />
           Small-batch candles · Ireland
         </div>
-        <h1 className="mb-7 font-sans text-[clamp(4rem,7.2vw,7.4rem)] font-light leading-[0.84] tracking-[-0.055em] text-stone-800">
-          Light Up Your <span className="font-serif font-normal italic tracking-[-0.045em]">Sanctuary.</span>
+        <h1 className="mb-7 font-serif text-[clamp(4rem,7.2vw,7.4rem)] font-normal italic leading-[0.84] tracking-[-0.045em] text-stone-800">
+          Light Up Your Sanctuary.
         </h1>
         <p className="mb-9 max-w-lg text-base font-light leading-7 text-stone-600 md:text-lg">
-          Hand-poured botanical candles designed to soften the room, slow the pace and turn everyday moments into rituals.
+          Hand-poured scented candles designed to soften the room, slow the pace and turn everyday moments into rituals.
         </p>
         <div className="flex flex-wrap gap-3">
           <a className="button-primary" href="#collection">Explore the collection <Icon name="arrow-right" className="size-4" /></a>
@@ -28,7 +28,7 @@ export function HeroSection() {
         </div>
         <div className="float-card absolute -bottom-5 left-2 z-10 flex w-[220px] items-center gap-4 rounded-2xl border border-white/70 bg-white/70 p-4 shadow-[0_15px_40px_rgba(28,25,23,0.12)] backdrop-blur-md lg:bottom-8 lg:-left-3">
           <span className="grid size-11 shrink-0 place-items-center rounded-full bg-amber-50 text-amber-700"><Icon name="flame" /></span>
-          <span><strong className="block font-serif text-lg font-medium">Clean burn</strong><small className="font-light text-stone-600">Plant wax · Cotton wick</small></span>
+          <span><strong className="block font-serif text-lg font-medium">Clean burn</strong><small className="font-light text-stone-600">Soy wax · Cotton wick</small></span>
         </div>
       </div>
     </section>

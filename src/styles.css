@@ -196,6 +196,113 @@ summary:focus-visible {
   transform: translateY(0);
 }
 
+.scent-dialog {
+  width: min(54rem, calc(100% - 2rem));
+  max-width: none;
+  max-height: min(44rem, calc(100dvh - 2rem));
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 1.5rem;
+  background: #faf9f6;
+  box-shadow: 0 30px 90px rgba(28, 25, 23, 0.24);
+  color: #292524;
+  opacity: 0;
+  transform: translateY(1rem) scale(0.97);
+  transition: opacity 250ms ease, transform 450ms var(--ease-lumaglow), display 450ms allow-discrete;
+}
+
+.scent-dialog[open] {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.scent-dialog::backdrop {
+  background: rgba(28, 25, 23, 0.62);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 300ms ease, display 300ms allow-discrete;
+}
+
+.scent-dialog[open]::backdrop {
+  opacity: 1;
+}
+
+@starting-style {
+  .scent-dialog[open] {
+    opacity: 0;
+    transform: translateY(1rem) scale(0.97);
+  }
+
+  .scent-dialog[open]::backdrop {
+    opacity: 0;
+  }
+}
+
+.scent-dialog-panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  grid-template-rows: minmax(0, 1fr);
+  height: min(44rem, calc(100dvh - 2rem));
+}
+
+.scent-dialog-media {
+  min-height: 0;
+  overflow: hidden;
+  background: #e7e5e4;
+}
+
+.scent-dialog-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.scent-dialog-content {
+  min-height: 0;
+  overflow-y: auto;
+  padding: 4.5rem 3.5rem 3.5rem;
+}
+
+.scent-dialog-close {
+  position: absolute;
+  z-index: 2;
+  top: 1.25rem;
+  right: 1.25rem;
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  cursor: pointer;
+  place-items: center;
+  border: 1px solid #d6d3d1;
+  border-radius: 999px;
+  background: rgba(250, 249, 246, 0.9);
+  color: #292524;
+  transition: color 250ms ease, background-color 250ms ease, transform 250ms ease;
+}
+
+.scent-dialog-close:hover {
+  background: #292524;
+  color: #faf9f6;
+  transform: rotate(5deg);
+}
+
+.scent-care summary::-webkit-details-marker {
+  display: none;
+}
+
+.scent-care-plus {
+  transition: color 250ms ease, background-color 250ms ease, transform 400ms var(--ease-lumaglow);
+}
+
+.scent-care[open] .scent-care-plus {
+  background: #292524;
+  color: #faf9f6;
+  transform: rotate(45deg);
+}
+
 .glow {
   position: absolute;
   width: 26rem;
@@ -295,6 +402,24 @@ summary:focus-visible {
 
   .faq-item p {
     padding-right: 0;
+  }
+
+  .scent-dialog {
+    max-height: calc(100dvh - 1rem);
+  }
+
+  .scent-dialog-panel {
+    grid-template-columns: 1fr;
+    grid-template-rows: 14rem minmax(0, 1fr);
+    height: calc(100dvh - 1rem);
+  }
+
+  .scent-dialog-media {
+    min-height: 0;
+  }
+
+  .scent-dialog-content {
+    padding: 2rem 1.5rem 1.5rem;
   }
 }
 
