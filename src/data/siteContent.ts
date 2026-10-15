@@ -85,7 +85,7 @@ export const products: Product[] = [
     id: "under-the-stars",
     name: "Under The Stars",
     mood: "For grounded moments",
-    notes: "Jasmine, Magnolia & Musk",
+    notes: "Vetiver, Patchouli & Grapefruit",
     description: "A late-afternoon sun breaks through the woodland canopy, taking you back to nights under the stars. Grapefruit and pepper spark the air with a sharp, crisp energy—reminiscent of childhood camping trips in the deep forest. As night settles in, the grounding scent of the earth rises beneath your feet, unfurling deep patchouli, rich vetiver, cedarwood, and musk. It is a beautiful memory captured in glass, connecting you to the soothing stillness of nature.",
     waxType: "100% C-3 Soy Wax",
     weight: "180g",
